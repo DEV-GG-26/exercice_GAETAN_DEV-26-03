@@ -23,12 +23,12 @@ class BilletReduit extends BilletPleinTarif{
     //METHODE
     public function calculerPrix(): float {
         if ( preg_match("/carte étudiante/i", $this->getJustificatif())) {
-            return $this-> getPrix() * 0.7;
+            return $this->getPrix()* 0.7;
         }
         return $this->getPrix();
     }
      public function imprimerDetail():void{
-        echo("Billet ETUDIANT N°{$this->getNumero()} <br/> Tarif de : {$this ->calculerPrix()}€ <br/> Film : {$this->getFilm()} <br/> Séance du {$this->getDate()}, à {$this->getHeure()}." );
+        echo("Billet ETUDIANT N°{$this->getNumero()} <br/> Tarif de : {$this->calculerPrix()}€ <br/> Film : {$this->getFilm()} <br/> Séance du {$this->getDate()}, à {$this->getHeure()}." );
     }
 }
 ?>

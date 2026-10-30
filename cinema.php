@@ -21,7 +21,7 @@ echo("<br/><br/>");
 
 //  Construction du billet pour étudiant avec le numero 42, prix réel : 23.5 euros, justificatif "carte étudiante"
 
-$etudiant1 = new BilletReduit ($film1->getDate(), $film1->getHeure(), $film1->getFilm(), 42, $adulte1->getPrix(),"carte étudiente");
+$etudiant1 = new BilletReduit ($film1->getDate(), $film1->getHeure(), $film1->getFilm(), 42, $adulte1->getPrix(),"carte étudiante");
 $etudiant1->imprimerDetail();
 
 echo("<br/><br/>");
