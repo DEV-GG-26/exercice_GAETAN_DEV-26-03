@@ -10,23 +10,23 @@ class ControllerAccueil{
         $this->viewAccueil = $viewAccueil;
     }
 
-    //GETTER ET SETTER
-    public function getModelProduit(): getModelProduit {
+    //GETTER
+public function getModelProduit(): getModelProduit {
         return $this->modelProduit;
     }
 
-    //Set the value of modelProduit
+ public function getViewAccueil(): ViewAccueil {
+        return $this->viewAccueil;
+    }
+    
+
+    //SETTER
+
     public function setModelProduit(ModelProduit $modelProduit): self {
         $this->modelProduit = $modelProduit;
         return $this;
     }
 
-    //Get the value of viewAccueil
-    public function getViewAccueil(): ViewAccueil {
-        return $this->viewAccueil;
-    }
-
-    // Set the value of viewAccueil
     public function setViewAccueil(ViewAccueil $viewAccueil): self {
         $this->viewAccueil = $viewAccueil;
         return $this;

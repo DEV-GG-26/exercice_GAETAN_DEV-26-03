@@ -7,30 +7,29 @@ class ViewAccueil {
     private array $list = [];
     private string $messageError = "";
 
-    //CONSTRUCTEUR
-
-    //GETTER ET SETTER
+    //GETTER
 
     public function getTitle(): string {
         return $this->title;
     }
+
+ public function getList(): array {
+        return $this->list;
+    }
+ public function getMessageError(): string {
+        return $this->messageError;
+    }
+
+    // SETTER
 
     public function setTitle(string $title): self {
         $this->title = $title;
         return $this;
     }
 
-    public function getList(): array {
-        return $this->list;
-    }
-
     public function setList(array $list): self {
         $this->list = $list;
         return $this;
-    }
-
-    public function getMessageError(): string {
-        return $this->messageError;
     }
 
     public function setMessageError(string $messageError): self {
@@ -59,7 +58,7 @@ class ViewAccueil {
                 <ul>
                     <?php 
                         foreach($this->list as $row){
-                            echo("<li>".htmlentities($row['nom_produit'])."</li>");
+                            echo("<li>".htmlentities($row['nom_produit'])." ,  ".htmlentities($row['nom_categorie'])."</li> <br/>");
                         }
                     ?>
                 </ul>
