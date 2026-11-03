@@ -64,10 +64,10 @@ class ControllerProduit{
     //Lancer le rendu de la page
     function render(){
         //1. Je demande au model de me fournir les données
-        $data = $this->getModel()->findAll();
+        $dataProduit = $this->getModel()->findAll();
 
         //2. Je passe les données à afficher à la View, puis je demande de faire l'affichage
-        $this->getView()->setData($data)->display();
+        $this->getView()->setDataProduit($dataProduit)->display();
     }
 }
 

@@ -1,18 +1,16 @@
 <?php
-//Class ViewProduit
-
 class ViewProduit {
     //ATTRIBUT
-    private array $data;
+    private array $dataProduit;
 
     //CONSTRUCTEUR
 
     //GETTER ET SETTER
-    public function getData():array{
-        return $this->data;
+    public function getDataProduit():array{
+        return $this->dataProduit;
     }
-    public function setData(array $newData):self{
-        $this->data = $newData;
+    public function setDataProduit(array $newDataProduit):self{
+        $this->dataProduit = $newDataProduit;
         return $this;
     }
 
@@ -24,15 +22,14 @@ class ViewProduit {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
+            <title>Produit</title>
         </head>
         <body>
             <main>
-                <h1>Liste de Produits : 1er Méthode</h1>
+                <h1>Liste de Produits :</h1>
                 <ul>
                     <?php 
-                        //Affichage des produits : 1er Méthode
-                        foreach($this->getData() as $produit){
+                        foreach($this->getDataProduit() as $produit){
                             echo("<li>{$produit["nom_produit"]} : {$produit["nom_categorie"]}</li>");
                         }
                     ?>
