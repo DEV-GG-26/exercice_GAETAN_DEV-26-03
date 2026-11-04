@@ -145,7 +145,7 @@ class ModelProduit{
     function findAll(){
         try{
             //1) Préparer la requête SELECT pour récupérer le nom des produits et leur catégorie
-            $request = $this->getPdo()->prepare('SELECT p.id_produit, p.nom_produit, p.prix_produit, p.stock_produit, c.nom_categorie FROM produit p INNER JOIN categorie c ON p.id_categorie = c.id_categorie;');
+            $request = $this->getPdo()->prepare('SELECT p.id_produit, p.nom_produit, p.prix_produit, p.stock_produit, c.nom_categorie FROM produit p INNER JOIN categorie c ON p.id_categorie = c.id_categorie');
 
             //3) Envoyer la requête à la BDD
             $request->execute();

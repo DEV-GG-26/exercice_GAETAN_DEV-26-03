@@ -1,6 +1,6 @@
 <?php
 //MODEL : class ModelProduit
-class ModelProduit{
+class ModelVendeur{
     //ATTRIBUT
     private int $idVendeur;
     private string $nomVendeur;

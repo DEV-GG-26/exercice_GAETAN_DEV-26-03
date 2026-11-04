@@ -15,7 +15,7 @@ class ViewProduit {
     }
 
     //METHODS
-    public function display(){
+    public function displayProduit(){
 ?>
         <!DOCTYPE html>
         <html lang="en">

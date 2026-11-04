@@ -1,21 +1,21 @@
 <?php
 class ViewVendeur {
     //ATTRIBUT
-    private array $data;
+    private array $dataVendeur;
 
     //CONSTRUCTEUR
 
     //GETTER ET SETTER
-    public function getData():array{
-        return $this->data;
+    public function getDataVendeur():array{
+        return $this->dataVendeur;
     }
-    public function setData(array $newData):self{
-        $this->data = $newData;
+    public function setDataVendeur(array $newDataVendeur):self{
+        $this->dataVendeur = $newDataVendeur;
         return $this;
     }
 
     //METHODS
-    public function display(){
+    public function displayVendeur(){
 ?>
         <!DOCTYPE html>
         <html lang="en">
@@ -29,7 +29,7 @@ class ViewVendeur {
                 <h1>Liste des Vendeurs :</h1>
                 <ul>
                     <?php 
-                        foreach($this->getData() as $vendeur){
+                        foreach($this->getDataVendeur() as $vendeur){
                             echo("<li>{$vendeur["nom_vendeur"]}, {$vendeur["prenom_vendeur"]}, {$vendeur["email_vendeur"]}</li>");
                         }
                     ?>

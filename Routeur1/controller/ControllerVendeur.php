@@ -60,12 +60,34 @@ class ControllerVendeur{
 
     //METHODS
     //Lancer le rendu de la page
-    function render():{
+    function renderVendeur():{
         //1. Je demande au model de me fournir les données
         $dataVendeur = $this->getModel()->findAll();
 
         //2. Je passe les données à afficher à la View, puis je demande de faire l'affichage
-        $this->getView()->setDataVendeur($dataVendeur)->display();
+        $this->getView()->setDataVendeur($dataVendeur)->displayVendeur();
+    
+?>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Vendeur</title>
+        </head>
+        <body>
+            <header>
+                <nav>
+                    <a href="../controller/controllerproduit.php">Produit</a>
+                    <a href="../controller/controllervendeur.php">Vendeur</a>
+                </nav>
+            </header>
+            <main>
+                <h1>Vendeur</h1>
+            </main>
+        </body>
+        </html>
+<?php
     }
 }
 
@@ -81,6 +103,6 @@ $view = new ViewVendeur();
 $controller = new ControllerVendeur($model, $view);
 
 //Lancement du Rendu de la page à partir du model et de la view
-$controller->render();
+$controller->renderVendeur();
 
 ?>
